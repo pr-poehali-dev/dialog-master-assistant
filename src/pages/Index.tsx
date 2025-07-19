@@ -21,9 +21,11 @@ export default function Index() {
               <Button variant="ghost" className="text-foreground hover:text-neon-cyan transition-colors">
                 Войти
               </Button>
-              <Button className="bg-gradient-to-r from-neon-blue to-neon-cyan text-white neon-border animate-neon-pulse">
-                Начать
-              </Button>
+              <a href="/chat">
+                <Button className="bg-gradient-to-r from-neon-blue to-neon-cyan text-white neon-border animate-neon-pulse">
+                  Начать
+                </Button>
+              </a>
             </div>
           </div>
         </div>
@@ -45,13 +47,15 @@ export default function Index() {
               разработки игр и приложений. Ваш персональный помощник в цифровом мире.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button 
-                size="lg"
-                className="bg-gradient-to-r from-neon-blue to-neon-cyan text-white px-8 py-4 text-lg neon-border animate-neon-pulse hover:scale-105 transition-transform"
-              >
-                <Icon name="Rocket" size={24} className="mr-2" />
-                Попробовать бесплатно
-              </Button>
+              <a href="/chat">
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-neon-blue to-neon-cyan text-white px-8 py-4 text-lg neon-border animate-neon-pulse hover:scale-105 transition-transform"
+                >
+                  <Icon name="Rocket" size={24} className="mr-2" />
+                  Попробовать бесплатно
+                </Button>
+              </a>
               <Button 
                 variant="outline" 
                 size="lg"
@@ -79,68 +83,76 @@ export default function Index() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Chat Assistant */}
-            <Card className="glass p-8 hover:neon-border hover:border-neon-cyan transition-all duration-300 group animate-slide-up">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-neon-blue to-neon-cyan flex items-center justify-center mb-6 group-hover:animate-neon-pulse">
-                <Icon name="MessageSquare" size={32} className="text-white" />
-              </div>
-              <h4 className="text-xl font-bold mb-4 text-primary">Чат-ассистент</h4>
-              <p className="text-muted-foreground mb-4">
-                Интеллектуальные диалоги с поддержкой контекста и персонализацией
-              </p>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li>• Многоязычная поддержка</li>
-                <li>• Понимание контекста</li>
-                <li>• Адаптация под стиль общения</li>
-              </ul>
-            </Card>
+            <a href="/chat">
+              <Card className="glass p-8 hover:neon-border hover:border-neon-cyan transition-all duration-300 group animate-slide-up cursor-pointer">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-neon-blue to-neon-cyan flex items-center justify-center mb-6 group-hover:animate-neon-pulse">
+                  <Icon name="MessageSquare" size={32} className="text-white" />
+                </div>
+                <h4 className="text-xl font-bold mb-4 text-primary">Чат-ассистент</h4>
+                <p className="text-muted-foreground mb-4">
+                  Интеллектуальные диалоги с поддержкой контекста и персонализацией
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li>• Многоязычная поддержка</li>
+                  <li>• Понимание контекста</li>
+                  <li>• Адаптация под стиль общения</li>
+                </ul>
+              </Card>
+            </a>
 
             {/* Game Development */}
-            <Card className="glass p-8 hover:neon-border hover:border-neon-magenta transition-all duration-300 group animate-slide-up">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-neon-magenta to-neon-cyan flex items-center justify-center mb-6 group-hover:animate-neon-pulse">
-                <Icon name="Gamepad2" size={32} className="text-white" />
-              </div>
-              <h4 className="text-xl font-bold mb-4 text-primary">Создание игр</h4>
-              <p className="text-muted-foreground mb-4">
-                Разработка игр и приложений с готовыми шаблонами и кодом
-              </p>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li>• Генерация кода бесплатно</li>
-                <li>• Современные анимации</li>
-                <li>• Готовые компоненты</li>
-              </ul>
-            </Card>
+            <a href="/gamedev">
+              <Card className="glass p-8 hover:neon-border hover:border-neon-magenta transition-all duration-300 group animate-slide-up cursor-pointer">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-neon-magenta to-neon-cyan flex items-center justify-center mb-6 group-hover:animate-neon-pulse">
+                  <Icon name="Gamepad2" size={32} className="text-white" />
+                </div>
+                <h4 className="text-xl font-bold mb-4 text-primary">Создание игр</h4>
+                <p className="text-muted-foreground mb-4">
+                  Разработка игр и приложений с готовыми шаблонами и кодом
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li>• Генерация кода бесплатно</li>
+                  <li>• Современные анимации</li>
+                  <li>• Готовые компоненты</li>
+                </ul>
+              </Card>
+            </a>
 
             {/* Education */}
-            <Card className="glass p-8 hover:neon-border hover:border-neon-blue transition-all duration-300 group animate-slide-up">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-neon-blue to-neon-magenta flex items-center justify-center mb-6 group-hover:animate-neon-pulse">
-                <Icon name="GraduationCap" size={32} className="text-white" />
-              </div>
-              <h4 className="text-xl font-bold mb-4 text-primary">Обучение</h4>
-              <p className="text-muted-foreground mb-4">
-                Интерактивные курсы по программированию, языкам и другим навыкам
-              </p>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li>• Персональные планы</li>
-                <li>• Практические задания</li>
-                <li>• Отслеживание прогресса</li>
-              </ul>
-            </Card>
+            <a href="/education">
+              <Card className="glass p-8 hover:neon-border hover:border-neon-blue transition-all duration-300 group animate-slide-up cursor-pointer">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-neon-blue to-neon-magenta flex items-center justify-center mb-6 group-hover:animate-neon-pulse">
+                  <Icon name="GraduationCap" size={32} className="text-white" />
+                </div>
+                <h4 className="text-xl font-bold mb-4 text-primary">Обучение</h4>
+                <p className="text-muted-foreground mb-4">
+                  Интерактивные курсы по программированию, языкам и другим навыкам
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li>• Персональные планы</li>
+                  <li>• Практические задания</li>
+                  <li>• Отслеживание прогресса</li>
+                </ul>
+              </Card>
+            </a>
 
             {/* Creative */}
-            <Card className="glass p-8 hover:neon-border hover:border-neon-cyan transition-all duration-300 group animate-slide-up">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-neon-cyan to-neon-blue flex items-center justify-center mb-6 group-hover:animate-neon-pulse">
-                <Icon name="Lightbulb" size={32} className="text-white" />
-              </div>
-              <h4 className="text-xl font-bold mb-4 text-primary">Творчество</h4>
-              <p className="text-muted-foreground mb-4">
-                Генерация идей, сценариев, рассказов и креативного контента
-              </p>
-              <ul className="text-sm text-muted-foreground space-y-2">
-                <li>• Генерация историй</li>
-                <li>• Творческие идеи</li>
-                <li>• Сценарии и планы</li>
-              </ul>
-            </Card>
+            <a href="/creative">
+              <Card className="glass p-8 hover:neon-border hover:border-neon-cyan transition-all duration-300 group animate-slide-up cursor-pointer">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-neon-cyan to-neon-blue flex items-center justify-center mb-6 group-hover:animate-neon-pulse">
+                  <Icon name="Lightbulb" size={32} className="text-white" />
+                </div>
+                <h4 className="text-xl font-bold mb-4 text-primary">Творчество</h4>
+                <p className="text-muted-foreground mb-4">
+                  Генерация идей, сценариев, рассказов и креативного контента
+                </p>
+                <ul className="text-sm text-muted-foreground space-y-2">
+                  <li>• Генерация историй</li>
+                  <li>• Творческие идеи</li>
+                  <li>• Сценарии и планы</li>
+                </ul>
+              </Card>
+            </a>
           </div>
         </div>
       </section>
